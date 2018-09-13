@@ -1,0 +1,39 @@
+{
+  "name": "birjemin/laravel-helper",
+  "description": "自己的laravel小助手，好的东西往里面添加，然后就可以偷懒了",
+  "keywords": ["laravel", "helper"],
+  "authors": [
+    {
+      "name": "birjemin",
+      "email": "birjemin@foxmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.7.10|~6.5"
+  },
+  "autoload": {
+    "files": [
+      "src/Helper/Helpers.php",
+      "src/Helper/Constants.php"
+    ],
+    "psr-4": {
+      "Birjemin\\LaravelHelper\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Birjemin\\LaravelHelper\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.1-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
+
