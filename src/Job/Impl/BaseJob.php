@@ -27,15 +27,15 @@ abstract class BaseJob implements ShouldQueue, BaseJobInterface
     /**
      * Execute the job.
      *
-     * @return void
+     * @return mixed
      */
     public function handle()
     {
-        $this->doAction();
+        return $this->doAction();
     }
 
     /**
      * @return mixed
      */
-    abstract function doAction();
+    abstract public function doAction();
 }

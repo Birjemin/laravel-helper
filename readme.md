@@ -16,3 +16,14 @@
 
 5. Transformer
 用于格式化数据
+
+6. Validator
+用于验证数据(以后不用写下面的东东啦)
+```
+if(...) {
+    throw new Exception('条件不合法');
+}
+if (!$user = User::find(1)) {
+    throw new Exception('用户不存在')
+}
+```

@@ -38,10 +38,11 @@ class DispatchJob extends BaseJob implements DispatchJobInterface
     }
 
     /**
-     *
+     * @return bool|mixed
      */
     public function doAction()
     {
         // TODO: Implement doAction() method.
+        return false;
     }
 }

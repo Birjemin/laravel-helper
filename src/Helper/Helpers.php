@@ -17,9 +17,9 @@ if (!function_exists('responseJson')) {
     function responseJson($data, $code = 0, $message = '')
     {
         return response()->json([
-            'code'      => $code,
-            'msg'       => $message,
-            'data'      => $data,
+            'code' => $code,
+            'msg'  => $message,
+            'data' => $data,
         ]);
     }
 }
@@ -41,7 +41,8 @@ if (!function_exists('responseJson1')) {
  * 环境变量
  */
 if (!function_exists('isDev')) {
-    function isDev() {
+    function isDev()
+    {
         return config('app.env') === BIR_PRODUCTION ? false : true;
     }
 }
@@ -50,7 +51,9 @@ if (!function_exists('isDev')) {
  *
  */
 if (!function_exists('array_get_int')) {
-    function array_get_int($params, $key) {
+    function array_get_int($params, $key)
+    {
         return intval(array_get($params, $key, 0));
     }
 }
+
