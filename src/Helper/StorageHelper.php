@@ -6,7 +6,7 @@
  * Time: 17:49
  */
 
-namespace Birjemin\LaravelHelper\Support;
+namespace Birjemin\LaravelHelper\Helper;
 
 
 /**
