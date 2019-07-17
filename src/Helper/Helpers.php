@@ -57,3 +57,26 @@ if (!function_exists('array_get_int')) {
     }
 }
 
+/**
+ * 随机一个和时间相关的订单号（长度最好大于16位，因为有一个时间8位）
+ */
+if (!function_exists('randNum')) {
+    function randNum($length = 18, $min = 16)
+    {
+        $length >= $min ?: $length = $min;
+        return date('Ymd') . substr(implode(null, array_map('ord',
+                    str_split(substr(uniqid(), 7, 13), 1))
+            ), 0, $length - 8);
+    }
+}
+
+/**
+ * 根据所传的值进行hash分类（用于分表）
+ */
+if (!function_exists('hashDb')) {
+    function hashDb($str, $max = 8)
+    {
+        return intval(fmod(sprintf("%u", crc32($str)), $max));
+    }
+}
+
