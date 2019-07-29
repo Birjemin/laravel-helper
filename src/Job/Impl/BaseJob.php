@@ -10,6 +10,7 @@ namespace Birjemin\LaravelHelper\Job\Impl;
 
 
 use Birjemin\LaravelHelper\Job\BaseJobInterface;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
@@ -20,7 +21,7 @@ use Illuminate\Queue\SerializesModels;
  */
 abstract class BaseJob implements ShouldQueue, BaseJobInterface
 {
-    use InteractsWithQueue, SerializesModels;
+    use InteractsWithQueue, SerializesModels, Queueable;
 
     /**
      * Execute the job.
