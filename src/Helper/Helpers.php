@@ -80,3 +80,25 @@ if (!function_exists('hashDb')) {
     }
 }
 
+/**
+ * 判断是否为手机号
+ */
+if (!function_exists('isMobile')) {
+    function isMobile($mobile)
+    {
+        return preg_match('#^1[3-9]\d{9}$#', $mobile) ? true : false;
+    }
+}
+
+/**
+ * 判断是否是email
+ */
+if (!function_exists('isEmail')) {
+    function isEmail(string $email)
+    {
+        return preg_match(
+            "/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i",
+            $email
+        ) ? true : false;
+    }
+}
