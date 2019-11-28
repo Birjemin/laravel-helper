@@ -102,3 +102,14 @@ if (!function_exists('isEmail')) {
         ) ? true : false;
     }
 }
+
+/**
+ * 隐藏一般字符串
+ */
+if (!function_exists('halfReplace')) {
+    function halfReplace($str, $hide = '*')
+    {
+        $len = strlen($str) / 2;
+        return substr_replace($str, str_repeat($hide, $len), ceil(($len) / 2), $len);
+    }
+}
