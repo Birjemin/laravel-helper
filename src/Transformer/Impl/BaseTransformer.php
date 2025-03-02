@@ -6,7 +6,7 @@
  * Time: 17:49
  */
 
-namespace Birjemin\LaravelHelper\Transformer\Transformer\Impl;
+namespace Birjemin\LaravelHelper\Transformer\Impl;
 
 
 use Birjemin\LaravelHelper\Transformer\BaseTransformerInterface;
@@ -18,7 +18,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * Class BaseTransformer
- * @package Birjemin\Transformer\Transformer\Impl
+ * @package Birjemin\Transformer\Impl
  */
 abstract class BaseTransformer implements BaseTransformerInterface
 {

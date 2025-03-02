@@ -16,7 +16,10 @@ bug fix
 ### v0.0.5
 bug fix
 
-### v0.0.d
+### v0.0.6
+alter helper
+
+### v0.0.7
 alter helper
 
 
